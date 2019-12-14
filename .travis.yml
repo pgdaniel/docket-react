@@ -1,6 +1,4 @@
-os: "linux"
-language: "javascript"
-
+sudo required
 services:
     - docker
 before_install:
@@ -11,7 +9,7 @@ script:
 
 deploy:
     edge: true
-    provider: "elasticbeanstalk"
+    provider: elasticbeanstalk
     region: "us-west-1"
     app: "docker"
     env: "Docker-env"
